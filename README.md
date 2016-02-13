@@ -1,5 +1,10 @@
 
-# Configure autoprefixer
+# javascript-builder
 
-## supported browsers
-update the file **browserslist** with browsers as specified at (browserslist)[https://github.com/ai/browserslist]
+## .builder.conf.js
+
+## .eslintignore
+
+## .eslintrc
+
+## karma.conf.js
