@@ -1,6 +1,6 @@
 {
   "name": "javascript-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very, very oppinionated module for linting, running jasmine tests, concatenating and minifying javascripts. It is in no way suggested that you should ever use this...",
   "main": "lib/javascript-builder.js",
   "bin": {
@@ -13,7 +13,7 @@
     "docs": "jsdoc app/*.js -d ./generated/jsdocs",
     "prebuild": "npm run clean && npm run docs && npm run test",
     "build": "npm pack",
-    "preinstall" : "npm install glob-handler"
+    "preinstall": "npm install glob-handler"
   },
   "author": "Jan Sundman <jan.sundman@aland.net>",
   "license": "MIT",
