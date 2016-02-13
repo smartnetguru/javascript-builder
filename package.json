@@ -12,10 +12,19 @@
     "development": "jasmine-node spec/ --autotest spec/ --watch app/",
     "docs": "jsdoc app/*.js -d ./generated/jsdocs",
     "prebuild": "npm run clean && npm run docs && npm run test",
-    "build": "npm pack"
+    "build": "npm pack",
+    "preinstall" : "npm install glob-handler"
   },
   "author": "Jan Sundman <jan.sundman@aland.net>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecodemine/javascript-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thecodemine/javascript-builder/issues"
+  },
+  "homepage": "https://github.com/thecodemine/javascript-builder#readme",
   "dependencies": {
     "angular-mocks": "1.3.5",
     "autoprefixer": "^6.3.1",
