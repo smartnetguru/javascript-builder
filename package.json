@@ -1,0 +1,44 @@
+{
+  "name": "javascript-builder",
+  "version": "1.0.0",
+  "description": "A very, very oppinionated module for linting, running jasmine tests, concatenating and minifying javascripts. It is in no way suggested that you should ever use this...",
+  "main": "lib/javascript-builder.js",
+  "bin": {
+    "javascript-builder": "bin/javascript-builder-cli.js"
+  },
+  "scripts": {
+    "clean": "rimraf dist generated",
+    "test": "jasmine-node spec/ --output generated/test-reports --junitreport",
+    "development": "jasmine-node spec/ --autotest spec/ --watch app/",
+    "docs": "jsdoc app/*.js -d ./generated/jsdocs",
+    "prebuild": "npm run clean && npm run docs && npm run test",
+    "build": "npm pack"
+  },
+  "author": "Jan Sundman <jan.sundman@aland.net>",
+  "license": "MIT",
+  "dependencies": {
+    "angular-mocks": "1.3.5",
+    "autoprefixer": "^6.3.1",
+    "commander": "^2.9.0",
+    "eslint": "^1.10.3",
+    "glob": "^6.0.4",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^3.4.2",
+    "phantomjs-prebuilt": "^2.1.4",
+    "postcss": "^5.0.14",
+    "promisify-node": "^0.3.0",
+    "q": "^1.4.1",
+    "uglify-js2": "^2.1.11"
+  },
+  "devDependencies": {
+    "cpy-cli": "^1.0.0",
+    "jasmine-node": "^1.14.5",
+    "jsdoc": "^3.4.0",
+    "rewire": "^2.5.1",
+    "rimraf": "^2.5.1"
+  }
+}
