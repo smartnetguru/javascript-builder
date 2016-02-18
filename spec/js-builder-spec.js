@@ -17,7 +17,7 @@ describe('javascript-builder', function() {
     spyOn(builder, 'build').andCallThrough();
   });
 
-  xit('should return the eslint count and continue to running tests', function(done) {
+  it('should return the eslint count and continue to running tests', function(done) {
     builder.build(['spec/test-files/1.js']).then(function(result) {
       expect(result.eslint.errorCount).toBe(0);
       expect(result.eslint.warningCount).toBe(0);
@@ -29,13 +29,13 @@ describe('javascript-builder', function() {
   it('should return the eslint count and continue not continue to run tests when warnings and errors- glob', function(done) {
     builder.build(['spec/*/!(test-with-warnings).js']).catch(function(result) {
       expect(result.eslint.errorCount).toBe(494);
-      expect(result.eslint.warningCount).toBe(640);
+      expect(result.eslint.warningCount).toBe(639);
       expect(result.karma).not.toBeDefined();
       done();
     });
   });
 
-  xit('should return the eslint count and continue not continue to run tests when warnings and errors- glob', function(done) {
+  it('should return the eslint count and continue not continue to run tests when warnings and errors- glob', function(done) {
     builder.build(['spec/*/!(1-test|test-with-warnings|3).js']).then(function(result) {
       expect(result.eslint.errorCount).toBe(0);
       expect(result.eslint.warningCount).toBe(0);
