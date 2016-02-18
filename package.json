@@ -1,6 +1,6 @@
 {
   "name": "javascript-builder",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A very, very oppinionated module for linting, running jasmine tests, concatenating and minifying javascripts. It is in no way suggested that you should ever use this...",
   "main": "lib/javascript-builder.js",
   "bin": {
